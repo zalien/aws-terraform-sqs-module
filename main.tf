@@ -7,7 +7,6 @@ resource "aws_sqs_queue" "sqs" {
   receive_wait_time_seconds = 0
 
   tags = {
-    business-unit = "JMDS"
-    application   = "rds-postgres"
+    Terraform = "true"
   }
 }
