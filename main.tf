@@ -5,8 +5,5 @@ resource "aws_sqs_queue" "sqs" {
   max_message_size          = 256000
   message_retention_seconds = 86400
   receive_wait_time_seconds = 0
-
-  tags = {
-    Terraform = "true"
-  }
+  tags = merge(var.tags)
 }
